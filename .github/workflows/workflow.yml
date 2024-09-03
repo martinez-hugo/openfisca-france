@@ -267,7 +267,7 @@ jobs:
           echo ("PACKAGE_VERSION=" + (python3 ./setup.py --version) ) >> $env:GITHUB_ENV
           echo "Version setup.py: ${{ env.PACKAGE_VERSION }}"
       - name: Download conda build
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           name: conda-build-${{ env.PACKAGE_VERSION }}-${{ github.sha }}
           path: conda-build-tmp
